@@ -1,5 +1,6 @@
 Required Notice: Copyright (c) 2026 TWO HANDS NETWORK LTD.
 Required Notice: MiddleOut-public-smoke is source-available for personal and non-commercial use. Commercial use, including incorporation into paid products, hosted services, managed services, enterprise products, or commercial AI coding/agent products, requires a separate written license from the licensor.
+Required Notice: Commercial licensing discussions should be directed to the COO/licensing contact at TWO HANDS NETWORK LTD; no commercial license is granted unless agreed in writing by TWO HANDS NETWORK LTD.
 
 # PolyForm Noncommercial License 1.0.0
 

@@ -14,3 +14,5 @@ https://martin123132.github.io/MiddleOut-public-smoke/latest-public-smoke.json
 The `gh-pages` branch contains only generated fixture HLS smoke artifacts used to prove that MiddleOut release evidence can be published and probed over public HTTP. Buyer media, source videos, credentials, and private MiddleOut repository contents are not published here.
 
 The private MiddleOut engine, benchmark harness, buyer data-room packages, production-readiness bundles, and deployment evidence remain outside this repository. Evaluation access starts through the public access gate above and may require written approval and an NDA.
+
+MiddleOut public smoke materials are source-available for personal and non-commercial inspection only. Commercial use requires a separate written commercial licence from TWO HANDS NETWORK LTD, and commercial licensing discussions should be directed to the COO/licensing contact through the private access or licensing route.

@@ -17,4 +17,6 @@ Commercial use requires a separate written license from the licensor. Commercial
 
 MiddleOut-public-smoke was created by Martin Ollett and is owned/licensed by TWO HANDS NETWORK LTD.
 
+Commercial licensing discussions should be directed to the COO/licensing contact at TWO HANDS NETWORK LTD. No commercial license is granted unless agreed in writing by TWO HANDS NETWORK LTD.
+
 This notice does not limit rights you may have under fair use, fair dealing, or other applicable law. It is intended to make the licensor's permission boundaries clear before the repository is made public.
