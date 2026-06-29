@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MiddleOut Public Smoke</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, sans-serif; max-width: 860px; margin: 48px auto; padding: 0 20px; line-height: 1.55; color: #172026; }
+    code { background: #f2f5f7; padding: 2px 5px; border-radius: 4px; }
+    a { color: #075985; }
+    .panel { border: 1px solid #d7dee4; border-radius: 8px; padding: 18px; background: #fbfcfd; }
+    video { width: 100%; aspect-ratio: 16 / 9; margin: 18px 0 8px; background: #0f1720; border-radius: 8px; }
+    .status { color: #465661; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <h1>MiddleOut Public Smoke</h1>
+  <p>This public GitHub Pages site is a tiny live-delivery smoke target for MiddleOut release validation.</p>
+  <div class="panel">
+    <p><strong>Latest HLS master:</strong> <a href="https://martin123132.github.io/MiddleOut-public-smoke/smoke/public-provider/20260629-211733/site/master.m3u8">https://martin123132.github.io/MiddleOut-public-smoke/smoke/public-provider/20260629-211733/site/master.m3u8</a></p>
+    <p><strong>Object prefix:</strong> <code>smoke/public-provider/20260629-211733</code></p>
+    <p><strong>Generated:</strong> <code>2026-06-29T21:17:47.3723192Z</code></p>
+    <p><strong>Machine-readable pointer:</strong> <a href="latest-public-smoke.json">latest-public-smoke.json</a></p>
+  </div>
+  <video id="smoke-player" controls muted playsinline preload="metadata"></video>
+  <p id="player-status" class="status">Preparing HLS player...</p>
+  <p>Only generated fixture HLS artifacts are published here. Buyer media, source videos, credentials, and private MiddleOut repository contents are not published through this path.</p>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js"></script>
+  <script>
+    const source = "https://martin123132.github.io/MiddleOut-public-smoke/smoke/public-provider/20260629-211733/site/master.m3u8";
+    const video = document.getElementById("smoke-player");
+    const status = document.getElementById("player-status");
+    if (video.canPlayType("application/vnd.apple.mpegurl")) {
+      video.src = source;
+      status.textContent = "Native HLS playback ready.";
+    } else if (window.Hls && window.Hls.isSupported()) {
+      const hls = new window.Hls();
+      hls.loadSource(source);
+      hls.attachMedia(video);
+      hls.on(window.Hls.Events.MANIFEST_PARSED, function () {
+        status.textContent = "HLS.js playback ready.";
+      });
+      hls.on(window.Hls.Events.ERROR, function (_, data) {
+        if (data && data.fatal) {
+          status.textContent = "Playback failed; use the direct HLS master link above.";
+        }
+      });
+    } else {
+      status.textContent = "This browser cannot play HLS here; use the direct master link above.";
+    }
+  </script>
+</body>
+</html>

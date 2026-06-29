@@ -1,0 +1,10 @@
+{
+    "schema":  "ratstream.public-smoke-latest.v1",
+    "generated_at":  "2026-06-29T21:17:47.3723192Z",
+    "repo":  "Martin123132/MiddleOut-public-smoke",
+    "pages_base_url":  "https://martin123132.github.io/MiddleOut-public-smoke",
+    "object_prefix":  "smoke/public-provider/20260629-211733",
+    "public_master_url":  "https://martin123132.github.io/MiddleOut-public-smoke/smoke/public-provider/20260629-211733/site/master.m3u8",
+    "hls_master_path":  "smoke/public-provider/20260629-211733/site/master.m3u8",
+    "note":  "Generated fixture HLS smoke artifacts only. Buyer media is not published here."
+}
